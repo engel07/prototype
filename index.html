@@ -5,7 +5,33 @@
 	<title>Ahorcado</title>
 
 	<script>
-	var perro = 
+
+    //variable global
+	nombre = "frisco";
+
+
+	//Clase: objeto maestro, del que se derivan otros objetos
+	//Clase: definicion de objeto
+	var Mascota = function (n, v){
+		this.nombre  = n;
+		this.voz     = v;
+
+	}
+
+	Mascota.prototype.hablar = function()
+	{
+		alert(this.voz);
+	}
+
+	//perro objeto de la clase mascota
+
+	var perro = new Mascota("roco","guau!!");
+	var gato  = new Mascota("misifu","miauuu!");
+
+	perro.hablar();
+
+
+	/*var perro = 
 	{
 		agilidad   : 50,
 		fuerza     : 100,
@@ -15,14 +41,17 @@
 		voz : function (){
 			alert("guau!!");
 		}
-	};
+	};*/
 
-	perro.voz();
+	
 	</script>
 </head>
 <body>
+
+	<h1>perros y gatos</h1>
 
 
 	
 </body>
 </html>
+
